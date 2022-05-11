@@ -133,6 +133,7 @@ public final class LoadGeneratorDescriptionExecutor extends RequestSender implem
 
         @Override
         public void lifeCycle() throws SuspendExecution {
+            super.lifeCycle();
             sendNewUserRequest();
             accReporter.addDatapoint("Load", presentTime(), 1);
             try {
